@@ -20,12 +20,12 @@ public class Program {
 		
 		System.out.println("===== TEST 1: seller findByd ====");
 		
-		Seller seller = sellerDao.findById(3);
+		Seller seller = sellerDao.findById(9);
 		
 		System.out.println(seller);
 		
 		System.out.println("\n=== TEST 3: seller findAll ====");
-		Department department = new Department (2 ," " );
+		Department department = new Department (4 ," " );
 		List< Seller > list = sellerDao.findAll();
 		
 		for (Seller obj: list) {
@@ -33,7 +33,7 @@ public class Program {
 		}
 		
 		System.out.println("\n=== TEST 4: seller insert ====");
-		Seller newSeller = new Seller (null, "Greg", " greg@gmail.com", new Date(), 4000.0, department);
+		Seller newSeller = new Seller (null, "ORGGreg", " orggreg@gmail.com", new Date(), 5000.0, department);
 		sellerDao.insert(newSeller);
 		System.out.println("inserted! New id = " + newSeller.getId());
 		
@@ -53,7 +53,7 @@ public class Program {
 
 		
 		System.out.println("\n=== TEST 5: seller update ====");
-		seller = sellerDao.findById(6);
+		seller = sellerDao.findById(10);
 		seller.setName("Martha Waine");
 		sellerDao.update(seller);
 		System.out.println("Update completed");
